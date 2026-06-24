@@ -30,6 +30,12 @@
             font-family: Arial, sans-serif;
             background: url("fondo.jpg") center/cover no-repeat fixed;
         }
+        @supports (-webkit-touch-callout: none) {
+    body {
+        background: url("fondo.jpg") center center / cover no-repeat;
+        background-attachment: scroll;
+    }
+}
 
 
  
@@ -43,9 +49,11 @@ section {
 
     text-align: center;
     padding: 20px;
-
+    align-content: center;
     scroll-snap-align: start;
     scroll-snap-stop: always;
+    flex-wrap:wrap;
+    
 }
 
       

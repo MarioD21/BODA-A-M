@@ -30,17 +30,20 @@
             font-family: Arial, sans-serif;
             background: url("fondo.jpg") center/cover no-repeat fixed;
         }
-        @supports (-webkit-touch-callout: none) {
-    body {
-        background: url("fondo.jpg") center center / cover no-repeat;
-        background-attachment: scroll;
-    }
+      @media  (max-height: 852px) {
+   body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: url("fondo.jpg") center center / cover no-repeat;
+    z-index: -1;
+}
 }
 
 
  
 section {
-    min-height: 100vh;
+   min-height: 100dvh;
     display: flex;
     flex-direction: column;
 
@@ -305,13 +308,18 @@ section {
     font-family: 'Courier New', Courier, monospace;
 }
 
-button{
-    padding:12px 25px;
-    border:none;
-    border-radius:8px ;
-    cursor:pointer;
-    font-size:18px;
+button {
+    -webkit-appearance: none;
+    appearance: none;
+
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+
     background-color: #768bab;
+    color: white; /* 👈 importante */
 }
 
 .texto-tips{
@@ -392,12 +400,11 @@ button{
     display: flex;
     justify-content: center;
 }
-
-.boton{
+.boton {
     display: inline-block;
     padding: 10px 20px;
     background: #8B5E3C;
-    color: white;
+    color: rgb(255, 255, 255) !important;
     text-decoration: none;
     border-radius: 8px;
 }
@@ -473,6 +480,22 @@ tips
     width: 100%;
 
     
+}
+
+  @media (max-height: 852px) {
+  #marco2 {
+    position: relative;
+    transform: translateY(30px);
+    width: 100%;
+  }
+}
+
+@media (min-height: 932px) {
+  #marco2 {
+    position: relative;
+    transform: translateY(30px);
+    width: 100%;
+  }
 }
 
 #marco2{
@@ -710,8 +733,7 @@ font-family: "Alex Brush", cursive;
 <br>
 
         <br>
-        <br>
-        <br>
+       
         
         
         <br>

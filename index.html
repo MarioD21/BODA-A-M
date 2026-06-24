@@ -33,15 +33,17 @@
 
 
  
-
-section{
-    min-height: 95vh;
+section {
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+
+    justify-content: center;   /* 🔥 antes: flex-start */
     align-items: center;
+
     text-align: center;
     padding: 20px;
+
     scroll-snap-align: start;
     scroll-snap-stop: always;
 }
@@ -116,7 +118,7 @@ section{
 
      
         .cuadro {
-                width: 94%;
+               
     max-width: 412px;
     margin: 20px auto;
     background: #fff;
@@ -138,20 +140,20 @@ section{
         }
 
         .flores {
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 100%;
+            position: relative;
+           
+           left:-18px;
+            width: 110%;
             pointer-events: none;
-            z-index: 5;
+       
         }
 
         .arriba {
-            top: -35px;
+            top: -81px;
         }
 
         .abajo {
-            bottom:-30px;
+            bottom:-80px;
         }
 
         .contenido h2{
@@ -201,7 +203,7 @@ section{
 
         .confirmacion .cuadro{
              
-               width: 94%;
+              
     max-width: 412px;
     margin: 20px auto;
     background: #fff;
@@ -393,7 +395,7 @@ ceremonia
 
  .ceremonia1 .cuadro{
              
-              width: 94%;
+      
     max-width: 412px;
     margin: 20px auto;
     background: #fff;
@@ -417,7 +419,7 @@ tips
 
  .tips .cuadro{
              
-              width: 94%;
+              
     max-width: 412px;
     margin: 20px auto;
     background: #fff;
@@ -451,16 +453,16 @@ tips
 
 
 #marco{
-    position: absolute;
-    top: 4298px;
+    position: relative;
+    top: -50px;
     width: 100%;
 
     
 }
 
 #marco2{
-    position: absolute;
-    top: 3810px;
+    position: relative;
+    top: -636px;
     
     width: 100%;
     
@@ -480,7 +482,7 @@ tips
 
 
 .regalo .cuadro{
-           width: 94%;
+          
     max-width: 412px;
     margin: 20px auto;
     background: #fff;
@@ -528,18 +530,14 @@ font-family: "Alex Brush", cursive;
 /*-------fotos---------*/
 
 .fotos .foto{
+      max-width: 412px;
+    margin: 20px auto;
+    background: #ffffff00;
+    border-radius: 30px;
+    padding: 60px 30px;
     color: #fff;
-        top: 5550px;
-            position: absolute;
-            width:80%;
-             left: 17px;
-            max-width: 414px;
-            background: #ffffff00;
-            border-radius: 30px;
-            padding: 60px 30px;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0);
-            overflow: visible;
-        
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0);
+    position: relative;
 
 }
 
@@ -558,7 +556,7 @@ font-family: "Alex Brush", cursive;
 /*----------------confirmacion----------------*/
 
 .Confirmacion2 .cuadro{
-            width: 94%;
+          
     max-width: 412px;
     margin: 20px auto;
     background: #fff;
@@ -949,8 +947,8 @@ font-family: "Alex Brush", cursive;
 
 
     </div>
-     <img id="marco" src="boda3.png" alt="">
-
+     
+<img id="marco" src="boda3.png" alt="">
     <img id="marco2" src="boda3.png" alt="">
 </section>
 

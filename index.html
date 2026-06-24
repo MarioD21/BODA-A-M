@@ -1,0 +1,1400 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitación</title>
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap" rel="stylesheet">
+   <style>
+                            @import url('https://fonts.cdnfonts.com/css/bright-sunshine');
+</style>
+                
+   
+   <style>
+
+
+
+    
+        html {
+            scroll-behavior: smooth;
+            scroll-snap-type: y mandatory;
+            overflow-y: scroll;
+            overflow-x: hidden;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: url("fondo.jpg") center/cover no-repeat fixed;
+        }
+
+
+ 
+
+section{
+    min-height: 95vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+}
+
+      
+
+
+       
+       
+
+               /* INICIO (NO TOCADO)
+        ============================ */
+
+   .inicio{
+    position: relative;
+    
+  
+   }
+
+ .ampersand {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    background: #768bab;
+    color: white;
+
+    font-size: 70px;
+    font-weight: bold;
+
+    line-height: 1;
+
+    transform: translateY(-8px); /* 👈 ajuste fino */
+}
+        .inicio hr {
+            width: 30vh;
+        }
+
+        .inicio h1 {
+            color: white;
+            font-size: 68px;
+            margin: 0;
+            text-shadow: 0 4px 10px rgba(0, 0, 0, .6);
+            font-family: "Alex Brush", cursive;
+            font-weight: 400;
+            font-style: normal;   
+             
+        }
+
+        .inicio h2 {
+            color: white;
+            font-size: 40px;
+            margin: 0;
+            text-shadow: 0 4px 10px rgba(0, 0, 0, .6);
+            
+        }
+
+        .inicio p {
+            color: white;
+            font-size: 18px;
+           
+            line-height: 1.6;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        /* ===========================
+                CUADRO (CORREGIDO)
+        ============================ */
+
+     
+        .cuadro {
+            top: 240px;
+            position: relative;
+            width:94%;
+            max-width: 412px;
+            background: #fff;
+            border-radius: 30px;
+            padding: 60px 30px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, .25);
+            overflow: visible;
+        }
+
+        .contenido-cuadro {
+            position: relative;
+            z-index: 1;
+        }
+
+        #corazon{
+            animation: latido 2s infinite;
+            font-size: 30px;
+        }
+
+        .flores {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            pointer-events: none;
+            z-index: 5;
+        }
+
+        .arriba {
+            top: -35px;
+        }
+
+        .abajo {
+            bottom:-30px;
+        }
+
+        .contenido h2{
+            font-size: 40px;
+            color: #768bab;
+            font-family:'Courier New', Courier, monospace;
+            font-weight: bold;
+        }
+         
+        /* CONTADOR */
+        .contador {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .bloque {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+        }
+
+        .bloque span {
+            font-size: 35px;
+            font-weight: bold;
+        }
+
+        .bloque p{
+            color: #768bab;
+            font-size: 25px;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+        }
+
+        .linea {
+            width: 1px;
+            height: 50px;
+            background: rgb(122, 135, 213);
+        }
+
+
+         /* ===========================
+                CONFIRMACION
+        ============================ */
+
+        .confirmacion .cuadro{
+             
+            top: 1955px;
+            position: absolute;
+            width:80%;
+            height: 520px;
+            left: 12px;
+            max-width: 412px;
+            background: #fff;
+            border-radius: 30px;
+            padding: 60px 30px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, .25);
+            overflow: visible;
+        
+
+        }
+        .confirmacion img{
+            width: 90px;
+        }
+
+        .ceremonia{
+    text-align:center;
+    font-size: 30px;
+}
+
+.ceremonia h3{
+    margin-bottom:10px;
+    color: #768bab;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.ceremonia hr{
+    width:80%;
+    margin:15px auto;
+    
+}
+
+.mes{
+    font-size:28px;
+    margin-bottom:20px;
+    color: black;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.fecha{
+    display:grid;
+    grid-template-columns:1fr auto 1fr;
+    align-items:center;
+    gap:20px;
+}
+
+.dia,
+.hora{
+    margin-bottom: 60px;
+    font-size:22px;
+    color: #768bab;
+    
+}
+
+.dia hr, .hora hr{
+    margin-top: -15px;
+}
+
+.numero{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    color: #768bab;
+    
+}
+
+.numero p{
+    font-size:60px;
+    margin:0;
+    font-weight:bold;
+    line-height:1;
+}
+
+.numero span{
+    font-size:20px;
+    color: black;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.lugar{
+    margin:25px 0;
+    font-size:22px;
+    color: black;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+button{
+    padding:12px 25px;
+    border:none;
+    border-radius:8px ;
+    cursor:pointer;
+    font-size:18px;
+    background-color: #768bab;
+}
+
+.texto-tips{
+    font-size: 16px;
+    font-weight: bold;
+    text-align: start !important;
+}
+
+.modal{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.7);
+    justify-content:center;
+    align-items:center;
+    z-index:9;
+}
+
+#bloqueSuperior{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:10px;
+}
+
+#bloqueSuperior img{
+    max-width:100%;
+    border-radius:15px;
+}
+.modal-contenido {
+  display: flex;
+  flex-direction: column;
+
+
+    position: relative;
+    background: white;
+    padding: 20px;
+    border-radius: 20px;
+    max-width: 80%;
+    max-height: 55%;
+}
+.modal-contenido img{
+    display:block;
+    max-width:100%;
+    max-height:80vh;
+    border-radius:15px;
+}
+
+.cerrar{
+    position:absolute;
+    top:10px;
+    right:15px;
+    font-size:35px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.modal h1{
+    text-align: center;
+    color:rgb(122, 135, 213);
+}
+
+.modal h2{
+    display: block;
+    text-align: center;
+    color: rgb(122, 135, 213);
+    margin-top: -50px;
+}
+
+.modal p{
+    color: black;
+    text-align: start;
+}
+.contenedor-boton{
+    display: flex;
+    justify-content: center;
+}
+
+.boton{
+    display: inline-block;
+    padding: 10px 20px;
+    background: #8B5E3C;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+/*
+
+ceremonia
+*/
+
+
+ .ceremonia1 .cuadro{
+             
+            top: 2858px;
+            position: absolute;
+            width:80%;
+            height: 520px;
+            left: 12px;
+            max-width: 412px;
+            background: #fff;
+            border-radius: 30px;
+            padding: 60px 30px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, .25);
+            overflow: visible;
+        
+
+        }
+        .ceremonia1 img{
+            width: 90px;
+        }
+
+        
+
+/*
+tips
+*/
+
+ .tips .cuadro{
+             
+            top: 3850px;
+            position: absolute;
+            width:80%;
+            height: 360px;
+        left: 12px;
+            max-width: 412px;
+            background: #fff;
+            border-radius: 30px;
+            padding: 60px 30px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, .25);
+            overflow: visible;
+        
+
+        }
+.tips h1{
+    color: #768bab;
+    font-size: 39px;
+    font-family: "Alex Brush", monospace;
+    
+}
+.tips img{
+    margin-top: 1px;
+    width: 30%;
+    
+}
+#imagennota{
+    animation: latido 2s infinite;
+}
+.tips p{
+    font-size: 21px;
+    font-family: 'Courier New', Courier;
+    font-weight: bold;
+}
+
+
+#marco{
+    position: absolute;
+    top: 4298px;
+    width: 100%;
+
+    
+}
+
+#marco2{
+    position: absolute;
+    top: 3810px;
+    
+    width: 100%;
+    
+}
+
+.titulo-tips{
+    font-size: 35px;
+    font-family: "Alex Brush", cursive;
+    
+    
+}
+
+
+
+
+/*-------------regalos------------- */
+
+
+.regalo .cuadro{
+        top: 4715px;
+            position: absolute;
+            width:80%;
+             left: 12px;
+            max-width: 414px;
+            background: #fff;
+            border-radius: 30px;
+            padding: 60px 30px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, .25);
+            overflow: visible;
+        
+}
+
+
+.regalo img{
+    width: 42%;
+    animation: latido 2s infinite;
+}
+
+
+
+.regalo h1{
+font-family: "Alex Brush", cursive;
+    font-size: 40px;                                            
+    color:#768bab;
+
+}
+
+.regalo p{
+    font-size: 16px;
+    font-family: 'Courier New', Courier, monospace;
+    line-height: 1.4;
+    font-weight: bold;
+   letter-spacing: -1px;
+}
+
+.modal-contenido{
+    max-width: 320px;
+}
+
+.modal-contenido p{
+    text-align:center;
+    line-height:1.6;
+}
+
+
+/*-------fotos---------*/
+
+.fotos .foto{
+    color: #fff;
+        top: 5550px;
+            position: absolute;
+            width:80%;
+             left: 17px;
+            max-width: 414px;
+            background: #ffffff00;
+            border-radius: 30px;
+            padding: 60px 30px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0);
+            overflow: visible;
+        
+
+}
+
+.fotos h1{
+    font-size: 35px;
+}
+
+.fotos p{
+    font-size: 20px;
+}
+
+.fotos img{
+    width: 70%;
+}
+
+/*----------------confirmacion----------------*/
+
+.Confirmacion2 .cuadro{
+        color: #fff;
+        top: 6590px;
+            position: absolute;
+            width:80%;
+             left: 12px;
+            max-width: 414px;
+            background: #ffffff;
+            border-radius: 30px;
+            padding: 60px 30px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0);
+            overflow: visible;
+}
+
+
+
+#confirmacionh1{
+    color: #768bab;
+    font-family: "Alex Brush", cursive;
+    font-size: 70px;
+    margin: 0;
+}
+
+
+#confirmacionp{
+    color: #768bab;
+    font-weight: bold;
+    font-size: 17px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.modal-form{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+    width:100%;
+}
+
+
+.opciones{
+    display:flex;
+    justify-content:center;
+    gap:40px;
+    flex-wrap:wrap;
+}
+
+.radio-label{
+    display:flex;
+    align-items:center;
+    color: #768bab;
+    gap:8px;
+    font-size:18px;
+}
+
+.campo{
+    display:flex;
+    flex-direction:column;
+    width:100%;
+}
+
+.campo label{
+    text-align:center;
+    color:#768bab;
+    margin-bottom:8px;
+    font-size:15px;
+    font-weight: 900;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.campo input,
+.campo textarea{
+    width:90%;
+    margin:0 auto;
+    padding:8spx 0;
+    border:none;
+    border-bottom:2px solid #768bab;
+    background:transparent;
+    outline:none;
+    font-size:16px;
+    box-sizing:border-box;
+    border-radius:0;
+}
+
+.campo textarea{
+    width:90%;
+    margin:0 auto;
+    padding:8px 0;
+    border:none;
+    border-bottom:2px solid #768bab;
+    background:transparent;
+    outline:none;
+    font-size:16px;
+    resize:none;
+    overflow:hidden;
+    min-height:24px;   /* Igual que un input */
+    height:24px;
+    line-height:24px;
+    box-sizing:border-box;
+}
+.btnEnviar{
+    width:180px;
+    margin:15px auto 0;
+}
+
+.modal-confirmacion2 #bloqueSuperior h1 {
+  font-size: 40px;
+  margin: 0;
+   font-family: "Alex Brush", cursive;
+   color: #768bab;
+
+}
+
+.img-confirmacion {
+    width: 35%;
+    animation: latido 2s infinite;
+}
+
+@keyframes latido {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.08);
+    }
+}
+
+
+
+    </style>
+</head>
+
+<body>
+
+    <!-- ===========================
+                INICIO (IGUAL)
+    ============================ -->
+
+    <section class="inicio">
+<br>
+<br>
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        
+        <br>
+        <br>
+        <p>04/07/2026</p>
+
+        <hr>
+
+        <h1>
+    Ashlee
+    <br>
+    <span class="ampersand">&amp;</span>
+    <br>
+    Mario
+</h1>
+
+        <hr>
+
+        <p>
+            "Dicen que un hilo rojo invisible conecta a aquellos que están destinados
+            a encontrarse, sin importar el tiempo ni la distancia. El nuestro hoy se
+            convierte en un lazo eterno; nos casamos, y queremos que seas testigo del
+            momento en que unimos nuestros caminos para siempre."
+        </p>
+
+        <img src="flecha.gif" alt="">
+
+    </section>
+
+    <!-- ===========================
+                CONTENIDO
+    ============================ -->
+
+    <section class="contenido">
+
+        <div class="cuadro">
+
+            <!-- MARCO ARRIBA -->
+            
+<img src="boda3.png" class="flores arriba" alt="">
+            <div class="contenido-cuadro">
+
+                <h2>Faltan</h2>
+
+                <div class="contador">
+
+                    <div class="bloque">
+                        <span id="dias">0</span>
+                        <p>Días</p>
+                    </div>
+
+                    <div class="linea"></div>
+
+                    <div class="bloque">
+                        <span id="horas">0</span>
+                        <p>Hr</p>
+                    </div>
+
+                    <div class="linea"></div>
+
+                    <div class="bloque">
+                        <span id="minutos">0</span>
+                        <p>Min</p>
+                    </div>
+
+                    <div class="linea"></div>
+
+                    <div class="bloque">
+                        <span id="segundos">0</span>
+                        <p>Seg</p>
+                    </div>
+
+                </div>
+
+                <p id="corazon">❤️</p>
+
+            </div>
+
+            <!-- MARCO ABAJO -->
+            <img src="boda3.png" class="flores abajo" alt="">
+
+        </div>
+
+    </section>
+
+    <!-- ===========================
+            CONFIRMACIÓN
+    ============================ -->
+
+  <section class="confirmacion">
+
+    <div class="cuadro">
+
+        <img src="anillos.png" alt="">
+
+        <div class="ceremonia">
+
+            <h3>CEREMONIA</h3>
+
+            <hr>
+            <p class="mes">JULIO</p>
+            <div class="fecha">
+                
+
+                <div class="dia">
+                    <p>SÁBADO</p>
+                    
+                    <hr>
+                </div>
+
+                <div class="numero">
+                    <p>04</p>
+                    <span>2026</span>
+                </div>
+
+                <div class="hora">
+                    <p>8:00PM</p>
+                    <hr>
+                </div>
+
+            </div>
+
+           
+
+            <p class="lugar">Quinta Regina</p>
+
+           
+            <button class="abrirMapa"
+            data-layout="img-first"
+            data-img="maps.png"
+            data-titulo="UBICACIÓN"
+            data-texto="Cjon. Álamo 670, 23 de Abril, 25748 Monclova, Coah."
+            data-subtitulo="Mapa Aqui"
+            data-link="https://www.google.com/maps/place/Sal%C3%B3n+y+Quinta+Regina/@26.9240992,-101.4154052,16z/data=!4m6!3m5!1s0x868bcd00089c4a79:0xf15423c8613bd1d5!8m2!3d26.9237596!4d-101.4117628!16s%2Fg%2F11lp2t4p7m?entry=ttu&g_ep=EgoyMDI2MDYxNi4wIKXMDSoASAFQAw%3D%3D"
+
+
+            
+            >¿Cómo llegar?</button>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="ceremonia1">
+
+    <div class="cuadro">
+
+        <img src="celebracion.png" alt="">
+
+        <div class="ceremonia">
+
+            <h3>CELEBRACIÓN</h3>
+
+            <hr>
+            <p class="mes">JULIO</p>
+            <div class="fecha">
+                
+
+                <div class="dia">
+                    <p>SÁBADO</p>
+                    
+                    <hr>
+                </div>
+
+                <div class="numero">
+                    <p>04</p>
+                    <span>2026</span>
+                </div>
+
+                <div class="hora">
+                    <p>9:00PM</p>
+                    <hr>
+                </div>
+
+            </div>
+
+           
+
+            <p class="lugar">Quinta Regina</p>
+
+            <button class="abrirMapa"
+            data-layout="img-first"
+            data-img="maps.png"
+            data-titulo="UBICACIÓN"
+            data-texto="Cjon. Álamo 670, 23 de Abril, 25748 Monclova, Coah."
+            data-subtitulo="Mapa Aqui"
+            data-link="https://www.google.com/maps/place/Sal%C3%B3n+y+Quinta+Regina/@26.9240992,-101.4154052,16z/data=!4m6!3m5!1s0x868bcd00089c4a79:0xf15423c8613bd1d5!8m2!3d26.9237596!4d-101.4117628!16s%2Fg%2F11lp2t4p7m?entry=ttu&g_ep=EgoyMDI2MDYxNi4wIKXMDSoASAFQAw%3D%3D"
+
+
+            
+            >¿Cómo llegar?</button>
+            
+        </div>
+
+    </div>
+
+</section>
+
+<div id="modal" class="modal">
+
+  <div class="modal-contenido">
+
+    <span class="cerrar">&times;</span>
+
+    <!-- contenedor dinámico -->
+    <div id="bloqueSuperior"></div>
+
+    <p id="modalTexto"></p>
+    <p id="modalTexto2"></p>
+    <p id="modalTexto3"></p>
+
+    <h2 id="modalSubtitulo"></h2>
+
+    <div class="contenedor-boton">
+      <a id="modalLink" href="#" target="_blank" class="boton">Ver ubicación</a>
+    </div>
+
+  </div>
+
+</div>
+
+
+
+  <!-- ===========================
+            Tips y notas
+    ============================ -->
+
+<section class="tips">
+   
+
+    <div class="cuadro">
+        <h1>Notas para los invitados</h1>
+        <img id="imagennota" src="notas.png" alt="">
+        <p>Todo lo que necesitas saber para disfrutar con nosotros</p>
+
+         <button class="abrirMapa"
+          data-layout="title-first"
+    data-titulo="Notas para los invitados"
+    data-texto="★ Ser puntuales con los horarios. \n ★ Cuidar el mobiliario y lugar. \n ★ Prohibido el ingreso de envases de vidrio. \n ★ Respetar el numero de invitados asignado en su invitación. \n ★ Responsabilidad y supervision en menores de edad.
+\n★ Prohibido el uso de alberca. \n ★ De no confirmar no se tomara en cuenta en el evento!
+\n\n Muchas gracias por su comprensión y apoyo para hacer de nuestra noche un dia inolvidable!.">
+    
+    Ver Más
+</button>
+    </div>
+
+
+    </div>
+     <img id="marco" src="boda3.png" alt="">
+
+    <img id="marco2" src="boda3.png" alt="">
+</section>
+
+
+  <!-- ===========================
+            regalos
+    ============================ -->
+
+<section class="regalo">
+
+ <div class="cuadro">
+    <h1>Una muestra de cariño</h1>
+    <img src="regalo.png" alt="">
+    <br>
+    <br>
+     <p>Tu presencia es nuestro mayor regalo. <br>
+Si de igual manera nace de tu corazón hacernos un presente. <br>
+Puedes hacerlo aqui:</p>
+    
+    <br>
+    <br>
+
+    <button class="abrirMapa"
+    data-layout="regalo">
+    Ver Más
+</button>
+ </div>
+</section>
+
+
+
+
+ <!-- ===========================
+            Fotos
+    ============================ -->
+
+<section class="fotos">
+
+    <div class="foto">
+        <h1>Compartimos este dia junto a ti</h1>
+     <p>Comparte tus fotos y videos de este hermoso dia</p>
+     <img src="qr.png" alt="">
+     <p>Escanea el código QR y sube tus fotos</p>
+
+     <a href="https://photos.app.goo.gl/WgSoY1W3opJ6Ctu38" target="_blank" class="boton">Sube Tus Fotos</a>
+   </div>
+    
+    
+    <br>
+    <br>
+
+    
+   
+
+</section>
+
+ <!-- ===========================
+            Confirmacion
+    ============================ -->
+<section class="Confirmacion2">
+
+    <div class="cuadro">
+
+        <h1 id="confirmacionh1">Confirmación</h1>
+        
+        <p id="confirmacionp">¿Nos acompañas en este día tan especial?</p>
+      <img src="confirmacion1.png" alt="" class="img-confirmacion">
+        <br>
+        <br>
+        <br>
+
+        <button class="abrirMapa"
+            data-layout="confirmacion"
+            data-titulo="Asistes a la celebracion?">
+
+            Confirmar Asistencia
+        </button>
+        
+
+    </div>
+
+</section>
+
+<div id="modalContenido"></div>
+
+
+
+<audio id="musica" loop>
+    <source src="cancion1.mp3" type="audio/mpeg">
+    Tu navegador no soporta audio.
+</audio>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+
+</body>
+
+
+<script type="module">
+const fechaEvento = new Date("July 4, 2026 20:00:00").getTime();
+
+const diasEl = document.getElementById("dias");
+const horasEl = document.getElementById("horas");
+const minutosEl = document.getElementById("minutos");
+const segundosEl = document.getElementById("segundos");
+
+function actualizarContador() {
+
+    const ahora = Date.now();
+    const diferencia = fechaEvento - ahora;
+
+    if (diferencia <= 0) {
+        diasEl.textContent = 0;
+        horasEl.textContent = 0;
+        minutosEl.textContent = 0;
+        segundosEl.textContent = 0;
+        return;
+    }
+
+    const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
+    const horas = Math.floor((diferencia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutos = Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60));
+    const segundos = Math.floor((diferencia % (1000 * 60)) / 1000);
+
+    diasEl.textContent = dias;
+    horasEl.textContent = horas;
+    minutosEl.textContent = minutos;
+    segundosEl.textContent = segundos;
+}
+
+setInterval(actualizarContador, 1000);
+actualizarContador();
+
+const modal = document.getElementById("modal");
+const botones = document.querySelectorAll(".abrirMapa");
+
+const bloqueSuperior = document.getElementById("bloqueSuperior");
+const texto = document.getElementById("modalTexto");
+const subtitulo = document.getElementById("modalSubtitulo");
+
+const cerrar = document.querySelector(".cerrar");
+const link = document.getElementById("modalLink");
+const contenedorBoton = document.querySelector(".contenedor-boton");
+
+botones.forEach(btn => {
+  btn.addEventListener("click", () => {
+
+    if (btn.closest(".Confirmacion2")) {
+    modal.classList.add("modal-confirmacion2");
+} else {
+    modal.classList.remove("modal-confirmacion2");
+}
+
+
+
+    const layout = btn.dataset.layout;
+
+
+    if (layout === "regalo") {
+
+    bloqueSuperior.innerHTML = `
+    <h1 style="
+        font-family:'Alex Brush',cursive;
+        color:#768bab;
+        font-size:38px;
+        font-weight:normal;
+        margin:0 0 10px 0;
+    ">
+        Una muestra de cariño
+    </h1>
+
+    <div style="
+        font-family: 'Courier New', Courier;
+        text-weigth:bold;
+        text-align:center;
+        
+    ">
+        <p style="margin:0;">
+            Cuenta bancaria:<br>
+            <strong>111111111111</strong><br>
+            Banco:<br>
+            <strong>BBVA</strong>
+        </p>
+
+        <div style="
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            gap:20px;
+            margin:20px 0;
+        ">
+            <img src="regalo.png" style="width:70px">
+            <span>ó</span>
+            <img src="sobre.png" style="width:70px">
+        </div>
+
+        <br>
+
+        <strong style="margin:0;
+        font-size:14px">
+            Agradecemos profundamente tu generosidad y sobre todo,
+            tu hermosa compañía en nuestro gran día.
+        </strong>
+    </div>
+`;
+
+    texto.innerHTML = "";
+    subtitulo.textContent = "";
+    contenedorBoton.style.display = "none";
+
+    modal.style.display = "flex";
+
+    return;
+}
+
+   if (layout === "confirmacion") {
+
+    bloqueSuperior.innerHTML = `
+        <h1>${btn.dataset.titulo}</h1>
+
+        <Br>
+
+        <form id="formConfirmacion" class="modal-form">
+
+            <div class="opciones">
+                <label class="radio-label">
+                    <input type="radio" name="asistencia" value="Si confirmo" required>
+                    ¡Sí! Confirmo
+                </label>
+
+                <label class="radio-label">
+                    <input type="radio" name="asistencia" value="No puedo">
+                    No puedo 😢
+                </label>
+            </div>
+            <Br>
+            <div class="campo">
+                <label for="nombre">Nombre completo</label>
+                <input
+                    type="text"
+                    id="nombre"
+                    name="nombre"
+                    required>
+            </div>
+              <Br>
+
+            <div class="campo">
+                <label for="mensaje">Ingrese cualquier información importante</label>
+                <textarea
+                    id="mensaje"
+                    name="mensaje"></textarea>
+            </div>
+
+            <button type="submit" class="btnEnviar">
+                Enviar
+            </button>
+
+        </form>
+    `;
+
+    texto.innerHTML = "";
+    subtitulo.textContent = "";
+    contenedorBoton.style.display = "none";
+
+    modal.style.display = "flex";
+
+    return;
+}
+    bloqueSuperior.innerHTML = "";
+
+    const h1 = document.createElement("h1");
+    h1.textContent = btn.dataset.titulo;
+
+    if (btn.closest(".tips")) {
+    h1.classList.add("titulo-tips");
+    
+}
+
+texto.innerHTML = (btn.dataset.texto || "").replace(/\\n/g, "<br>");
+
+if (btn.closest(".tips")) {
+    h1.classList.add("titulo-tips");
+    texto.classList.add("texto-tips");
+} else {
+    h1.classList.remove("titulo-tips");
+    texto.classList.remove("texto-tips");
+}
+
+    const image = document.createElement("img");
+    image.src = btn.dataset.img || "";
+
+    // 🔥 tamaño SOLO para este botón
+    image.style.width = "auto";
+
+    if (btn.dataset.imgWidth) {
+        image.style.width = btn.dataset.imgWidth;
+    }
+
+    // 🔥 ORDEN REAL
+    if (layout === "title-first") {
+      bloqueSuperior.appendChild(h1);
+      bloqueSuperior.appendChild(image);
+    } else {
+      bloqueSuperior.appendChild(image);
+      bloqueSuperior.appendChild(h1);
+    }
+
+    texto.innerHTML = (btn.dataset.texto || "").replace(/\\n/g, "<br>");
+    subtitulo.textContent = btn.dataset.subtitulo || "";
+
+    const url = btn.dataset.link;
+  
+
+    if (url) {
+      link.href = url;
+      contenedorBoton.style.display = "flex";
+    } else {
+      contenedorBoton.style.display = "none";
+    }
+
+    modal.style.display = "flex";
+
+    const textarea = document.getElementById("mensaje");
+
+textarea.addEventListener("input", function () {
+    this.style.height = "24px";        // Reinicia la altura
+    this.style.height = this.scrollHeight + "px"; // Crece según el contenido
+});
+  });
+});
+cerrar.onclick = () => modal.style.display = "none";
+window.onclick = (e) => {
+  if (e.target === modal) modal.style.display = "none";
+};
+
+window.addEventListener("load", () => {
+    const musica = document.getElementById("musica");
+
+    musica.play().catch(() => {
+        console.log("El navegador bloqueó la reproducción automática.");
+    });
+});
+
+//-----------------confirmacion----------------
+
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+import { 
+  getFirestore, 
+  collection, 
+  addDoc, 
+  getDocs 
+} from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";// 🔥 TU CONFIG DE FIREBASE (la que ya tienes)
+const firebaseConfig = {
+  apiKey: "AIzaSyAztH9BO38ezzcYwrjZMftZVOJ_9RStRPc",
+  authDomain: "boda-aym.firebaseapp.com",
+  projectId: "boda-aym",
+  storageBucket: "boda-aym.firebasestorage.app",
+  messagingSenderId: "260103648864",
+  appId: "1:260103648864:web:ed2c073ac4df0679853505",
+};
+
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+
+document.addEventListener("submit", async (e) => {
+  if (e.target.id !== "formConfirmacion") return;
+
+  e.preventDefault();
+
+  const form = e.target;
+
+  const asistencia = form.asistencia.value;
+  const nombre = form.nombre.value;
+  const mensaje = form.mensaje.value;
+
+  try {
+    await addDoc(collection(db, "confirmaciones"), {
+      asistencia,
+      nombre,
+      mensaje,
+      fecha: new Date()
+    });
+
+    alert("¡Confirmación enviada!");
+
+    form.reset();
+    modal.style.display = "none";
+
+  } catch (error) {
+    console.error("Error al guardar:", error);
+    alert("Error al enviar, intenta de nuevo.");
+  }
+});
+async function exportarExcel() {
+
+  const snapshot = await getDocs(collection(db, "confirmaciones"));
+
+  const datos = snapshot.docs.map((doc) => {
+    const d = doc.data();
+
+    return {
+      "👤 Nombre": d.nombre || "",
+      "✔ Asistencia": d.asistencia || "",
+      "💬 Mensaje": d.mensaje || "",
+      "📅 Fecha": d.fecha
+        ? new Date(d.fecha.seconds * 1000).toLocaleString()
+        : ""
+    };
+  });
+
+  const hoja = XLSX.utils.json_to_sheet(datos);
+
+  // 📊 ancho de columnas
+  hoja["!cols"] = [
+    { wch: 25 },
+    { wch: 15 },
+    { wch: 40 },
+    { wch: 25 }
+  ];
+
+  // 🔎 filtro tipo Excel
+  hoja["!autofilter"] = { ref: "A1:D1" };
+
+  const libro = XLSX.utils.book_new();
+  XLSX.utils.book_append_sheet(libro, hoja, "Confirmaciones");
+
+  XLSX.writeFile(libro, "confirmaciones.xlsx");
+}
+document.addEventListener("keydown", (e) => {
+
+  if (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === "e") {
+    exportarExcel();
+  }
+
+});
+
+</script>
+
+</html>

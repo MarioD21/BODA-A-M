@@ -114,8 +114,7 @@ section {
     text-align: center;
     padding: 20px;
     align-content: center;
-    scroll-snap-align: start;
-    scroll-snap-stop: always;
+  
     flex-wrap:wrap;
     
 }
@@ -1402,9 +1401,7 @@ window.onclick = (e) => {
 window.addEventListener("load", () => {
     const musica = document.getElementById("musica");
 
-    musica.play().catch(() => {
-        console.log("El navegador bloqueó la reproducción automática.");
-    });
+   
 });
 
 //-----------------confirmacion----------------
@@ -1520,8 +1517,10 @@ btnPortada1.addEventListener("click", () => {
 btnEntrar.addEventListener("click", () => {
     portada2.style.display = "none";
     contenido.style.display = "block";
+    const musica = document.getElementById("musica");
 
     document.body.classList.remove("portada-activa");
+     musica.play();
 });
 
 const params = new URLSearchParams(window.location.search);

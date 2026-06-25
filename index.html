@@ -59,6 +59,18 @@
     cursor: pointer;
 }
 
+@media  (max-height: 700px) {
+  #portada2 button {
+    position: absolute;
+
+    top: 65%;   /* 👈 ajusta aquí */
+    left: 50%;  /* 👈 ajusta aquí */
+
+    transform: translate(-50%, -50%);
+}
+}
+
+
 #btnEntrar{
     padding: 10px 35px;
     font-size: 20px;
@@ -456,6 +468,7 @@ button {
     justify-content: center;
 }
 .boton {
+    margin-bottom: 15px;
     display: inline-block;
     padding: 10px 20px;
     background: #8B5E3C;
@@ -651,7 +664,7 @@ font-family: "Alex Brush", cursive;
 .Confirmacion2 .cuadro{
           
     max-width: 412px;
-    margin: 20px auto;
+    margin: 20px 20px;
     background: #fff;
     border-radius: 30px;
     padding: 60px 30px;

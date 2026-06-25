@@ -16,20 +16,81 @@
    <style>
 
 
+#contenidoPagina{
+    display: none;
+} 
 
-    
-        html {
-            scroll-behavior: smooth;
-            scroll-snap-type: y mandatory;
-            overflow-y: scroll;
-            overflow-x: hidden;
-        }
+.portada {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("portada.png") center/cover no-repeat;
+    z-index: 99999;
+}
+
+#portada2 {
+    display: none; /* empieza oculta */
+    background: url(sanchezmartinez.png)center center / cover no-repeat;
+    position: fixed;
+    inset: 0;
+
+}
+
+#portada2 button {
+    position: absolute;
+
+    top: 62%;   /* 👈 ajusta aquí */
+    left: 50%;  /* 👈 ajusta aquí */
+
+    transform: translate(-50%, -50%);
+}
+
+/* bloqueo scroll */
+
+#btnPortada1{
+    padding: 50px 35px;
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+    background: #768bab00;
+    color: white;
+    cursor: pointer;
+}
+
+#btnEntrar{
+    padding: 10px 35px;
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+    background: #768bab00;
+    color: white;
+    cursor: pointer;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+/* PORTADA ACTIVA = BLOQUEO TOTAL */
+body.portada-activa {
+    overflow: hidden; /* 🔥 bloquea X y Y juntos */
+    height: 100vh;
+}
+
+/* contenido oculto */
+#contenidoPagina {
+    display: none;
+}
 
         body {
-            margin: 0;
+      
             font-family: Arial, sans-serif;
             background: url("fondo.jpg") center/cover no-repeat fixed;
         }
+
+       
       @media  (max-height: 852px) {
    body::before {
     content: "";
@@ -59,11 +120,6 @@ section {
     
 }
 
-      
-
-
-       
-       
 
                /* INICIO (NO TOCADO)
         ============================ */
@@ -724,19 +780,34 @@ font-family: "Alex Brush", cursive;
 
 <body>
 
+  
+
+<div id="portada1" class="portada activa">
+    <button id="btnPortada1"></button>
+</div>
+
+
+<div id="portada2" class="portada">
+    <button id="btnEntrar"></button>
+</div>
+
+
+
+<div id="contenidoPagina">
+
+ 
+
+
+
+
+
     <!-- ===========================
                 INICIO (IGUAL)
     ============================ -->
 
     <section class="inicio">
 <br>
-<br>
-
-        <br>
-       
-        
-        
-        <br>
+ 
         <br>
         <p>04/07/2026</p>
 
@@ -976,7 +1047,7 @@ font-family: "Alex Brush", cursive;
           data-layout="title-first"
     data-titulo="Notas para los invitados"
     data-texto="★ Ser puntuales con los horarios. \n ★ Cuidar el mobiliario y lugar. \n ★ Prohibido el ingreso de envases de vidrio. \n ★ Respetar el numero de invitados asignado en su invitación. \n ★ Responsabilidad y supervision en menores de edad.
-\n★ Prohibido el uso de alberca. \n ★ De no confirmar no se tomara en cuenta en el evento!
+\n★ Prohibido el uso de alberca. \n ★ Sin confirmación previa se negara el acceso a el evento!
 \n\n Muchas gracias por su comprensión y apoyo para hacer de nuestra noche un dia inolvidable!.">
     
     Ver Más
@@ -984,7 +1055,7 @@ font-family: "Alex Brush", cursive;
     </div>
 
 
-    </div>
+  
      
 <img id="marco" src="boda3.png" alt="">
     <img id="marco2" src="boda3.png" alt="">
@@ -1081,7 +1152,13 @@ Puedes hacerlo aqui:</p>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 
+
+
+</div>
+
+
 </body>
+
 
 
 <script type="module">
@@ -1223,11 +1300,12 @@ botones.forEach(btn => {
             </div>
             <Br>
             <div class="campo">
-                <label for="nombre">Nombre completo</label>
+                <label for="nombre">Nombre(s)</label>
                 <input
                     type="text"
                     id="nombre"
                     name="nombre"
+                    placeholder="Ejemplo: Ashlee y Mario."
                     required>
             </div>
               <Br>
@@ -1422,6 +1500,74 @@ document.addEventListener("keydown", (e) => {
 
 });
 
+const portada1 = document.getElementById("portada1");
+const portada2 = document.getElementById("portada2");
+const contenido = document.getElementById("contenidoPagina");
+
+const btnPortada1 = document.getElementById("btnPortada1");
+const btnEntrar = document.getElementById("btnEntrar");
+
+// inicio: solo portada 1
+document.body.classList.add("portada-activa");
+
+// 👉 botón 1 abre portada 2
+btnPortada1.addEventListener("click", () => {
+    portada1.style.display = "none";
+    portada2.style.display = "flex";
+});
+
+// 👉 botón 2 abre contenido
+btnEntrar.addEventListener("click", () => {
+    portada2.style.display = "none";
+    contenido.style.display = "block";
+
+    document.body.classList.remove("portada-activa");
+});
+
+const params = new URLSearchParams(window.location.search);
+const invitado = params.get("invitado");
+
+
+
+if (invitado === "PeñaReyes") {
+    portada2.style.backgroundImage = "url('peñareyes.png')";
+}
+
+if (invitado === "SanchezMartinez") {
+    portada2.style.backgroundImage = "url('sanchezmartinez.png')";
+}
+
+if (invitado === "GonzalesDeLaTorre") {
+    portada2.style.backgroundImage = "url('GonzalesDeLaTorre.png')";
+}
+
+if (invitado === "PeñaRodriguez") {
+    portada2.style.backgroundImage = "url('PeñaRodriguez.png')";
+}
+
+if (invitado === "AlmaCastellanos") {
+    portada2.style.backgroundImage = "url('AlmaCastellanos.png')";
+}
+
+if (invitado === "AaronReyes") {
+    portada2.style.backgroundImage = "url('AaronReyes.png')";
+}
+
+if (invitado === "RojasGarcia") {
+    portada2.style.backgroundImage = "url('RojasGarcia.png')";
+}
+
+if (invitado === "GuajardoReyes") {
+    portada2.style.backgroundImage = "url('GuajardoReyes.png')";
+}
+
+if (invitado === "PalomaresSanchez") {
+    portada2.style.backgroundImage = "url('PalomaresSanchez.png')";
+}
+
+if (invitado === "OrtizSanchez") {
+    portada2.style.backgroundImage = "url('OrtizSanchez.png')";
+}
 </script>
 
 </html>

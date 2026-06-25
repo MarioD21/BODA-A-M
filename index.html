@@ -567,13 +567,15 @@ tips
   }
 }
 
-@media (min-height: 900px) {
+  @media (min-height: 931px) {
   #marco2 {
     position: relative;
-    
+    transform: translateY(30px);
     width: 100%;
   }
 }
+
+
 
 #marco2{
     position: relative;
@@ -1229,6 +1231,23 @@ const contenedorBoton = document.querySelector(".contenedor-boton");
 botones.forEach(btn => {
   btn.addEventListener("click", () => {
 
+    if (
+      invitado === "HinojosSanchez" &&
+      btn.closest(".Confirmacion2")
+    ) {
+      window.open("https://us05web.zoom.us/j/4071460289?pwd=fA0Qg8T8fNcFMXpiDqzE5dbmxRgf9q.1&omn=87905821743", "_blank");
+      return;
+    }
+
+     if (
+      invitado === "DeLaTorreSuarez" &&
+      btn.closest(".Confirmacion2")
+    ) {
+      window.open("https://us05web.zoom.us/j/4071460289?pwd=fA0Qg8T8fNcFMXpiDqzE5dbmxRgf9q.1&omn=87905821743", "_blank");
+      return;
+    }
+
+
     if (btn.closest(".Confirmacion2")) {
     modal.classList.add("modal-confirmacion2");
 } else {
@@ -1261,7 +1280,7 @@ botones.forEach(btn => {
     ">
         <p style="margin:0;">
             Cuenta bancaria:<br>
-            <strong>111111111111</strong><br>
+            <strong>4152 3145 0126 3084</strong><br>
             Banco:<br>
             <strong>BBVA</strong>
         </p>
@@ -1588,8 +1607,77 @@ if (invitado === "OrtizSanchez") {
     portada2.style.backgroundImage = "url('OrtizSanchez.png')";
 }
 
-if (invitado === "Ricardo") {
+if (invitado === "RicardoCardenas") {
     portada2.style.backgroundImage = "url('Ricardo.png')";
+}
+
+if (invitado === "SebastianMoreno") {
+    portada2.style.backgroundImage = "url('Sebastian.png')";
+}
+
+if (invitado === "ArturoBriseño") {
+    portada2.style.backgroundImage = "url('Arturo.png')";
+}
+
+if (invitado === "AlejandraReyes") {
+    portada2.style.backgroundImage = "url('Alejandra.png')";
+}
+
+if (invitado === "RodriguezMoreno") {
+    portada2.style.backgroundImage = "url('RodriguezMoreno.png')";
+}
+
+if (invitado === "GonzalezSanMiguel") {
+    portada2.style.backgroundImage = "url('GonzalesSanMiguel.png')";
+}
+
+if (invitado === "AguirreIbarra") {
+    portada2.style.backgroundImage = "url('AguirreIbarra.png')";
+}
+
+if (invitado === "MartinezSuarez") {
+    portada2.style.backgroundImage = "url('MartinezSuarez.png')";
+}
+
+if (invitado === "SifuentesZepeda") {
+    portada2.style.backgroundImage = "url('SifuentesZepeda.png')";
+}
+
+if (invitado === "HinojosSanchez") {
+
+    portada2.style.backgroundImage = "url('HinojosSanchez.png')";
+
+    // Cambiar título
+    const titulo = document.getElementById("confirmacionh1");
+    titulo.textContent = "Familia Hinojos Sánchez";
+    titulo.style.fontSize = "40px"; // ajusta el tamaño
+
+    // Cambiar texto del botón
+    const boton = document.querySelector(".Confirmacion2 .abrirMapa");
+    boton.textContent = "Unete a la Ceremonia";
+
+     const Hora = document.querySelector(".confirmacion .hora p");
+     Hora.textContent = "9:00PM";
+
+     const Hora2= document.querySelector(".ceremonia1 .hora p");
+     Hora2.textContent = "10:00PM";
+
+
+    
+   
+}
+
+if (invitado === "DeLaTorreSuarez") {
+    portada2.style.backgroundImage = "url('DeLaTorreSuarez.png')";
+
+     // Cambiar título
+    const titulo = document.getElementById("confirmacionh1");
+    titulo.textContent = "Familia De La Torre Suárez";
+    titulo.style.fontSize = "40px"; // ajusta el tamaño
+
+    // Cambiar texto del botón
+    const boton = document.querySelector(".Confirmacion2 .abrirMapa");
+    boton.textContent = "Unete a la Ceremonia";
 }
 
 </script>
